@@ -2,22 +2,27 @@
   border-style: solid;
   background-color: red;
 }
+
 .middle-container{
   border-style: solid;
   background-color: blue;
-height: 100vh
+  height: 100vh
 }
+
 .page-footer{
   border-style: solid;
   background-color: green;
 }
+
 .album-container{
   height: 18%;
     border-style: solid;
   background-color: yellow;
 }
+
 .album{
   background-color: orange;
   margin-left:25px;
   margin-right:25px;
 }
+
