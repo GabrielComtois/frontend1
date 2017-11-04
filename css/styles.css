@@ -1,28 +1,62 @@
-.page-header{
-  border-style: solid;
-  background-color: red;
-}
-
+/*
 .middle-container{
   border-style: solid;
   background-color: blue;
   height: 100vh
-}
+}*/
 
-.page-footer{
+
+/*.page-footer{
   border-style: solid;
   background-color: green;
 }
-
 .album-container{
   height: 18%;
     border-style: solid;
-  background-color: yellow;
-}
+}*/
 
-.album{
+
+/*.album{
   background-color: orange;
   margin-left:25px;
   margin-right:25px;
+}*/
+
+.equipment-container {
+    background-color: purple;
+    border-style: solid;
+    border-width: 4px 4px 4px 4px;
+    border-color: white;
 }
 
+.page-header {
+    background-color: yellow;
+}
+
+.promo-container {
+    background-color: lightgreen;
+}
+
+.promo-container img {
+    max-width: 100%;
+}
+
+.bold-white {
+    font-weight: bold;
+    color: white;
+}
+
+.title-container {
+    background-color: #2c495b;
+}
+
+.global_sprite {
+    background-position: 0 -81px;
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    width: 55px;
+    height: 55px;
+    border: none;
+    margin-left: 5px;
+}
