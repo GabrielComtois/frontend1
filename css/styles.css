@@ -6,10 +6,7 @@
 }*/
 
 
-/*.page-footer{
-  border-style: solid;
-  background-color: green;
-}
+/*
 .album-container{
   height: 18%;
     border-style: solid;
@@ -31,6 +28,12 @@
 
 .page-header {
     background-color: yellow;
+}
+
+.page-footer {
+    background-color: #2c495b;
+    color: #fff;
+    opacity: .9;
 }
 
 .promo-container {
@@ -59,4 +62,9 @@
     height: 55px;
     border: none;
     margin-left: 5px;
+}
+
+.navbar {
+    background-color: #2c495b;
+    color: white;
 }
