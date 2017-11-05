@@ -1,48 +1,363 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
+    <title>INF4150 - TP2 - mardi 07 novembre</title>
     <meta charset="utf-8">
-    <title>juno.co.uk</title>
-    <meta name="description" content="juno.co.uk">
-    <meta name="author" content="SitePoint">
-    <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12 text-center page-header">
-                <h1>Header</h1>
-            </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- Nav bar fixed top -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <!-- <div class="container-fluid">  -->
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header" style="background-color: #2c495b; color: white; width: 100%;">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color: white;"><b>juno</b> records</a>
+          <div>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Rechercher">
+              </div>
+              <button type="submit" class="btn btn-default">Rechercher</button>
+              <img src="https://cmscdn.juno.co.uk/cms/1326/12314/1_8.jpg" alt="test">
+            </form>
+          </div>
         </div>
-        <div class="col-lg-9 offset-lg-1 middle-container">
-            <div class="row album-container">
-                <h1>albums</h1>
-                <div class="col-lg-1 album">
-                </div>
-                <div class="col-lg-1 album">
-                </div>
-                <div class="col-lg-1 album">
-                </div>
-                <div class="col-lg-1 album">
-                </div>
-                <div class="col-lg-1 album">
-                </div>
-                <div class="col-lg-1 album">
-                </div>
-            </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Music <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">DJ Equipment</a></li>
+            <li><a href="#">Studio Equipment</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Langage</a></li>
+            <li><a href="#">Voucher</a></li>
+            <li><a href="#">Login/Register</a></li>
+            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">Cart</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="row">
-            <div class="col-lg-12 text-center page-footer">
-                <h1>Footer</h1>
-            </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+    
+    <!-- container ad banner top -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 promo-container">
+          <br><br><br><br><br>
+          <img src="https://cmscdn.juno.co.uk/cms/1323/12267/1_2.jpg" alt="ad1">
         </div>
-    </div>
-    <script src="vendor/js/jquery-3.2.1.min.js"></script>
-    <script src="vendor/js/bootstrap.min.js"></script>
+      </div>
+      <!-- conteneur albums et singles -->
+      <div class="row album-container">
+        <div class="col-xs-1 title-container">
+          <h3 class="list-header text-center vertical-text bold-white">Albums</h3>
+        </div>
+        
+        <div class="col-xs-1 chevron-container">
+          <img src="img/chevron-left.png" alt="go left">
+        </div>
+        <div class="col-xs-1 album">
+          <div class="irs_merchandise_child_contents">
+            <div class="irs_merchandise_child_contents_container">
+              <div class="irs_merchandise_child_contents_container_image">
+                <img src="https://imagescdn.juno.co.uk/full/CS657590-01A-BIG.jpg" alt="the album">
+              </div>
+              <div class="irs_merchandise_child_contents_container_text album-artist">SW</div>
+              <div class="irs_merchandise_child_contents_container_text album-title">The Album</div>
+              <div class="irs_merchandise_child_contents_container_text album-label">Apollo</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1 album">
+          <div class="irs_merchandise_child_contents">
+            <div class="irs_merchandise_child_contents_container">
+              <div class="irs_merchandise_child_contents_container_image">
+                <img src="https://imagescdn.juno.co.uk/75/CS664452-01A-TN.jpg" alt="No Spiritual Surrender">
+              </div>
+              <div class="irs_merchandise_child_contents_container_text album-artist">JC/KASTIL</div>
+              <div class="irs_merchandise_child_contents_container_text album-title">No Spiritual Surrender</div>
+              <div class="irs_merchandise_child_contents_container_text album-label">Cabrera</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1 album">
+          <div class="irs_merchandise_child_contents">
+            <div class="irs_merchandise_child_contents_container">
+              <div class="irs_merchandise_child_contents_container_image">
+                <img src="https://imagescdn.juno.co.uk/75/CS661001-01A-TN.jpg" alt="Anxious">
+              </div>
+              <div class="irs_merchandise_child_contents_container_text album-artist">RODHAD</div>
+              <div class="irs_merchandise_child_contents_container_text album-title">Anxious</div>
+              <div class="irs_merchandise_child_contents_container_text album-label">Dystopian</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1 album">
+          <div class="irs_merchandise_child_contents">
+            <div class="irs_merchandise_child_contents_container">
+              <div class="irs_merchandise_child_contents_container_image">
+                <img src="https://imagescdn.juno.co.uk/75/CS664904-01A-TN.jpg" alt="Reworks Volume 1">
+              </div>
+              <div class="irs_merchandise_child_contents_container_text album-artist">EROL ALKAN/VARIOUS</div>
+              <div class="irs_merchandise_child_contents_container_text album-title">Arpo</div>
+              <div class="irs_merchandise_child_contents_container_text album-label">Reworks Volume 1t</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-xs-1 album">
+          <div class="irs_merchandise_child_contents">
+            <div class="irs_merchandise_child_contents_container">
+              <div class="irs_merchandise_child_contents_container_image">
+                <img src="https://imagescdn.juno.co.uk/75/CS669263-01A-TN.jpg" alt="Houndstoot">
+              </div>
+              <div class="irs_merchandise_child_contents_container_text album-artist">CALL SUPER</div>
+              <div class="irs_merchandise_child_contents_container_text album-title">Arpo</div>
+              <div class="irs_merchandise_child_contents_container_text album-label">Houndstoot</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1 album">
+          <div class="irs_merchandise_child_contents">
+            <div class="irs_merchandise_child_contents_container">
+              <div class="irs_merchandise_child_contents_container_image">
+                <img src="https://imagescdn.juno.co.uk/75/CS665716-01A-TN.jpg" alt="Tumult">
+              </div>
+              <div class="irs_merchandise_child_contents_container_text album-artist">MEUTE</div>
+              <div class="irs_merchandise_child_contents_container_text album-title">Tumult</div>
+              <div class="irs_merchandise_child_contents_container_text album-label">Tumult</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-1 chevron-container">
+          <img src="img/chevron-right.png" alt="go left">
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-xs-1 title-container single-container">
+          <h3 class="list-header text-center vertical-text bold-white">Singles</h3>
+        </div>
+        <div class="col-xs-9 single-container">
+          
+          <ul class="list-inline">
+            <li></li>
+            <li class="album">
+              <img src="https://imagescdn.juno.co.uk/75/CS657590-01A-TN.jpg" alt="album1">
+            </li>
+            <li class="album"> <img src="https://imagescdn.juno.co.uk/75/CS664452-01A-TN.jpg" alt="album2"></li>
+            <li class="album"> <img src="https://imagescdn.juno.co.uk/75/CS661001-01A-TN.jpg" alt="album3"></li>
+            <li class="album"> <img src="https://imagescdn.juno.co.uk/75/CS664904-01A-TN.jpg" alt="album3"></li>
+            <li class="album"> <img src="https://imagescdn.juno.co.uk/75/CS669263-01A-TN.jpg" alt="album3"></li>
+            <li class="album"> <img src="https://imagescdn.juno.co.uk/75/CS665716-01A-TN.jpg" alt="album3"></li>
+          </ul>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 promo-container">
+          <img src="https://cmscdn.juno.co.uk/cms/1323/12270/1_1.jpg" alt="ad1">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3 promo-container">
+          <img src="https://cmscdn.juno.co.uk/cms/693/6592/1_115.jpg" alt="ad1">
+        </div>
+        <div class="col-xs-5 player-container">
+          <h3>Album </h3>
+          <audio controls>
+            <source src="http://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+            <source src="http://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+            <a href="http://www.w3schools.com/html/horse.mp3">horse</a>
+          </audio>
+        </div>
+        <div class="col-xs-3 promo-container">
+          <img class="float-right" src="https://cmscdn.juno.co.uk/cms/692/12195/1_2.jpg" alt="ad1">
+        </div>
+      </div>
+      <!-- conteneur dj equipment + studio equipment + dj accessoiries + bags, storage -->
+      <div class="row justify-content-center " style="background-color: lightblue; ">
+        <!-- offset -->
+        <div class="col-xs-2 " style="background-color: red; ">
+          Offset
+        </div>
+        <div class="col-xs-2 bottom-container">
+          <!-- conteneur titre + loupe -->
+          <div class="row title-container " style="text-align: center;">
+            <a href="/dj-equipment/ " class="bold-white ">DJ EQUIPMENT</a>
+          </div>
+          <div class="row">
+            <p></p>
+          </div>
+          <!-- contenu (image + texte) -->
+          <div class="row " style="margin: auto; max-width: 100%;">
+            <div>
+              <a href="dj-equipment/headphones ">
+                <img style="margin: auto; max-width: 100%;" src="img/turntable.jpg" alt=" DJ headphones " class="global_sprite ">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-2 bottom-container">
+          <!-- conteneur titre + loupe -->
+          <div class="row title-container " style="text-align: center;">
+            <a href="/dj-equipment/ " class="bold-white ">STUDIO EQUIPMENT</a>
+          </div>
+          <div class="row">
+            <p></p>
+          </div>
+          <!-- contenu (image + texte) -->
+          <div class="row " style="margin: auto; max-width: 100%;">
+            <div>
+              <a href="dj-equipment/headphones ">
+                <img style="margin: auto; max-width: 100%;" src="img/equipment.jpg" alt=" DJ headphones " class="global_sprite ">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-2 bottom-container">
+          <!-- conteneur titre + loupe -->
+          <div class="row title-container " style="text-align: center;">
+            <a href="/dj-equipment/ " class="bold-white ">DJ ACCESSORIES</a>
+          </div>
+          <div class="row">
+            <p></p>
+          </div>
+          <!-- contenu (image + texte) -->
+          <div class="row " style="margin: auto; max-width: 100%;">
+            <div>
+              <a href="dj-equipment/headphones ">
+                <img style="margin: auto; max-width: 100%;" src="img/headphones.jpg" alt=" DJ headphones " class="global_sprite ">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-2 bottom-container">
+          <!-- conteneur titre + loupe -->
+          <div class="row title-container " style="text-align: center;">
+            <a href="/dj-equipment/ " class="bold-white ">BAGS, STORAGE</a>
+          </div>
+          <div class="row">
+            <p></p>
+          </div>
+          <!-- contenu (image + texte) -->
+          <div class="row " style="margin: auto; max-width: 100%;">
+            <div>
+              <a href="dj-equipment/headphones ">
+                <img style="margin: auto; max-width: 100%;" src="img/bag.jpg" alt=" DJ headphones " class="global_sprite ">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <p></p>
+      </div>
+      </div> <!-- fin conteneur publicités -->
+      <!-- footer -->
+      <footer class="page-footer ">
+        <div class="container ">
+          <div class="row "><!-- row -->
+          <div class="col-lg-3 col-md-3 "><!-- widgets column left -->
+          <ul class="list-unstyled clear-margins "><!-- widgets -->
+          <li class="widget-container widget_nav_menu "><!-- widgets list -->
+          <h3 class="title-widget ">Useful links</h3>
+          <ul>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i> About Us</a></li>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i> Contact Us</a></li>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i> Success Stories</a></li>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i> PG Courses</a></li>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i> Achiever's Batch</a></li>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i>  Regular Batch</a></li>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i>  Test & Discussion</a></li>
+            <li><a  href="# "><i class="fa fa-angle-double-right "></i>  Fast Track T & D</a></li>
+          </ul>
+        </li>
+      </ul>
+      </div><!-- widgets column left end -->
+      <div class="col-lg-3 col-md-3 "><!-- widgets column left -->
+      <ul class="list-unstyled clear-margins "><!-- widgets -->
+      <li class="widget-container widget_nav_menu "><!-- widgets list -->
+      <h3 class="title-widget ">Useful links</h3>
+      <ul>
+        <li><a  href="# "><i class="fa fa-angle-double-right "></i>  Test Series Schedule</a></li>
+        <li><a  href="# "><i class="fa fa-angle-double-right "></i>  Postal Coaching</a></li>
+        <li><a  href="# "><i class="fa fa-angle-double-right "></i>  PG Dr. Bhatia Books</a></li>
+        <li><a  href="# "><i class="fa fa-angle-double-right "></i>  UG Courses</a></li>
+        <li><a  href="# "><i class="fa fa-angle-double-right "></i>  Satellite Education</a></li>
+        <li><a  href="# "><i class="fa fa-angle-double-right "></i>  Study Centres</a></li>
+        <li><a  href="# "><i class="fa fa-angle-double-right "></i>  State P.G. Mocks</a></li>
+        <li><a  href="# " target="_blank "><i class="fa fa-angle-double-right "></i> Results</a></li>
+      </ul>
+    </li>
+  </ul>
+  </div><!-- widgets column left end -->
+  <div class="col-lg-3 col-md-3 "><!-- widgets column left -->
+  <ul class="list-unstyled clear-margins "><!-- widgets -->
+  <li class="widget-container widget_nav_menu "><!-- widgets list -->
+  <h3 class="title-widget ">Useful links</h3>
+  <ul>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i> Enquiry Form</a></li>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i> Online Test Series</a></li>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i> Grand Tests Series</a></li>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i> Subject Wise Test Series</a></li>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i> Smart Book</a></li>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i> Test Centres</a></li>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i>  Admission Form</a></li>
+    <li><a href="# "><i class="fa fa-angle-double-right "></i>  Computer Live Test</a></li>
+  </ul>
+</li>
+</ul>
+</div><!-- widgets column left end -->
+<div class="col-lg-3 col-md-3 "><!-- widgets column center -->
+<ul class="list-unstyled clear-margins "><!-- widgets -->
+<li class="widget-container widget_recent_news "><!-- widgets list -->
+<h3 class="title-widget ">Contact Detail </h3>
+<div class="footerp ">
+<h4 class="title-median ">Webenlance Pvt. Ltd.</h4>
+<p><b>Email id:</b> <a href="mailto:info@webenlance.com ">info@webenlance.com</a></p>
+<p><b>Helpline Numbers </b>
+<b style="color:#ffc106; ">(8AM to 10PM):</b>  +91-8130890090, +91-8130190010  </p>
+<p><b>Corp Office / Postal Address</b></p>
+<p><b>Phone Numbers : </b>7042827160, </p>
+<p> 011-27568832, 9868387223</p>
+</div>
+<div class="social-icons ">
+<ul class="nomargin ">
+  <a href="https://www.facebook.com/bootsnipp "><i class="fa fa-facebook-square fa-3x social-fb " id="social "></i></a>
+  <a href="https://twitter.com/bootsnipp "><i class="fa fa-twitter-square fa-3x social-tw " id="social "></i></a>
+  <a href="https://plus.google.com/+Bootsnipp-page "><i class="fa fa-google-plus-square fa-3x social-gp " id="social "></i></a>
+  <a href="mailto:bootsnipp@gmail.com "><i class="fa fa-envelope-square fa-3x social-em " id="social "></i></a>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
 </body>
-
 </html>
