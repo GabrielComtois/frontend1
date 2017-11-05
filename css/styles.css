@@ -17,7 +17,7 @@
 
 
 .album {
-width:10.5vw;
+width:8vw;
 margin-top:25px;
 }
 
@@ -83,6 +83,8 @@ margin-top:25px;
 .chevron-container img {
     max-width: 50px;
     margin-top:50px;
+    margin-left: 5px;
+    padding-left: 0px;
 }
 
 .global_sprite {
