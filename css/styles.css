@@ -68,3 +68,10 @@
     background-color: #2c495b;
     color: white;
 }
+
+.bottom-container {
+	border-color: white; 
+	border-style: solid; 
+	border-width: medium; 
+	background-color:white;
+}
