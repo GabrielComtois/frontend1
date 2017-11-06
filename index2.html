@@ -8,6 +8,23 @@
 		<link href="css/styles.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script>
+			(function($){
+				$(document).ready(function(){
+					$('.nav li.dropdown').hover(function() {
+						$(this).addClass('open');
+					}, function() {
+						$(this).removeClass('open');
+					});
+					$('ul.dropdown-menu [data-toggle=dropdown]').on('mouseover', function(event) {
+						event.preventDefault(); 
+						event.stopPropagation(); 
+						$(this).parent().siblings().removeClass('open');
+						$(this).parent().toggleClass('open');
+					});
+				});
+			})(jQuery);
+		</script>
 	</head>
 	<body>
 		<!-- Nav bar fixed top -->
@@ -22,38 +39,146 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="#" style="color: white;"><b>juno</b> records</a>
+					<a class="navbar-brand" href="#" style="font-size: 175%; color: white;"><b>juno</b> records</a>
 					<div>
 						<form class="navbar-form navbar-right">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Rechercher">
+								<input type="text" class="form-control" placeholder="Search">
 							</div>
-							<button type="submit" class="btn btn-default">Rechercher</button>
+							<button type="submit" class="btn btn-default">Search</button>
 							<img src="https://cmscdn.juno.co.uk/cms/1326/12314/1_8.jpg" alt="test">
 						</form>
 					</div>
 				</div>
+				
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Music <span class="sr-only">(current)</span></a></li>
-						<li><a href="#">DJ Equipment</a></li>
-						<li><a href="#">Studio Equipment</a></li>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+					<ul class="nav navbar-nav navbar">
+						<li>
+							<nav class="header" role="navigation">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<div class="collapse navbar-collapse" id="navbar-collapse-1">
+									<ul class="nav navbar-nav">
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Music <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Dropdown Link 1</a></li>
+												<li><a href="#">Dropdown Link 2</a></li>
+												<li><a href="#">Dropdown Link 3</a></li>
+												<li class="divider"></li>
+												<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Dropdown Submenu Link 4.1</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.2</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.3</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.4</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">DJ Equipment <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Dropdown Link 1</a></li>
+												<li><a href="#">Dropdown Link 2</a></li>
+												<li><a href="#">Dropdown Link 3</a></li>
+												<li class="divider"></li>
+												<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Dropdown Submenu Link 4.1</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.2</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.3</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.4</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle dropbtn" data-toggle="dropdown">Studio Equipment <span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="#">Dropdown Link 1</a></li>
+												<li><a href="#">Dropdown Link 2</a></li>
+												<li><a href="#">Dropdown Link 3</a></li>
+												<li class="divider"></li>
+												<li class="dropdown dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown Link 4</a>
+													<ul class="dropdown-menu">
+														<li><a href="#">Dropdown Submenu Link 4.1</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.2</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.3</a></li>
+														<li><a href="#">Dropdown Submenu Link 4.4</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div><!-- /.navbar-collapse -->
+							</nav>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#">Langage</a></li>
-						<li><a href="#">Voucher</a></li>
-						<li><a href="#">Login/Register</a></li>
-						<li><a href="#">Wishlist</a></li>
-						<li><a href="#">Cart</a></li>
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help <span class="caret"></span></a>
+							<a href="#" data-toggle="dropdown" >EN </a>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" >Voucher </a>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" >Login/Register </a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
+								<li style="text-align: center;"><button type="submit" class="btn btn-default" style="width: 90%; opacity: .5; color: #2c495b;">Login/Register</button></li>
 								<li role="separator" class="divider"></li>
-								<li><a href="#">Separated link</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Artists</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Back-In-Stock Alerts</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Labels</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Account</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Wishlist</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Charts</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My New Release E-mails</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Order History</a></li>
+								<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Coming Soon Alerts</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" >Wishlist</a>
+							<ul class="dropdown-menu">
+								<li style="text-align: center;">
+									<h5 style="text-align: center; opacity: .5; color: #2c495b;">Login to view your wishlist</h5>
+									<button type="submit" class="btn btn-default" style="width: 90%; opacity: .5; color: #2c495b;">Wishlist</button>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" >Cart </a>
+							<ul class="dropdown-menu">
+								<li style="text-align: center;">
+									<h5 style="width: 100%; text-align: center; opacity: .5; color: #2c495b;">Your cart is empty</h5>
+									<button type="submit" class="btn btn-default" style="width: 90%; opacity: .5; color: #2c495b;">View cart</button>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" >Help <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Ordering</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Ordering Problems</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> FAQ</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Contact Us (Customers)</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Contact Us (Suppliers)</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> About Juno</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> DJ & Studio Store</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> My Charts</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Resubmit Card</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Feedback</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Privacy Policy</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Terms and Conditions</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Finance</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Juno Vinyl Distribution</a></li>
+								<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Juno Marketing and PR department</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -476,92 +601,104 @@
 				</div>
 				<div class="row">
 					<p></p>
-				</div>
+				</div>	
+			</div>
+			</div>
+		</div> <!-- fin conteneur publicités -->
 				
-				</div> <!-- fin conteneur publicités -->
-				
-				<!-- footer -->
-				<footer class="page-footer ">
-					<div class="container ">
-						<div class="row "><!-- row -->
-						<div class="col-lg-3 col-md-3 "><!-- widgets column left -->
-						<ul class="list-unstyled clear-margins "><!-- widgets -->
-						<li class="widget-container widget_nav_menu "><!-- widgets list -->
-						<h3 class="title-widget ">Useful links</h3>
-						<ul>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i> About Us</a></li>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i> Contact Us</a></li>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i> Success Stories</a></li>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i> PG Courses</a></li>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i> Achiever's Batch</a></li>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i>  Regular Batch</a></li>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i>  Test & Discussion</a></li>
-							<li><a  href="# "><i class="fa fa-angle-double-right "></i>  Fast Track T & D</a></li>
+		<!-- footer -->
+		<footer class="page-footer ">
+			<div class="container ">
+				<div class="row "><!-- row -->
+					<div class="col-lg-3 col-md-3 "><!-- column left -->
+						<ul class="list-unstyled clear-margins "><!-- content -->
+							<li class="widget-container widget_nav_menu "><!-- list -->
+								<h4 class="title-widget ">Help & information</h4>
+								<ul>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Ordering</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Ordering Problems</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> FAQ</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Contact Us (Customers)</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Contact Us (Suppliers)</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> About Juno</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> DJ & Studio Store</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> My Charts</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Resubmit Card</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Feedback</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Privacy Policy</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Terms and Conditions</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Finance</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Juno Vinyl Distribution</a></li>
+									<li><a class="footer-link "  href="# "><i class="fa fa-angle-double-right "></i> Juno Marketing and PR department</a></li>
+								</ul>
+							</li>
 						</ul>
-					</li>
-				</ul>
-				</div><!-- widgets column left end -->
-				
-				<div class="col-lg-3 col-md-3 "><!-- widgets column left -->
-				<ul class="list-unstyled clear-margins "><!-- widgets -->
-				<li class="widget-container widget_nav_menu "><!-- widgets list -->
-				<h3 class="title-widget ">Useful links</h3>
-				<ul>
-					<li><a  href="# "><i class="fa fa-angle-double-right "></i>  Test Series Schedule</a></li>
-					<li><a  href="# "><i class="fa fa-angle-double-right "></i>  Postal Coaching</a></li>
-					<li><a  href="# "><i class="fa fa-angle-double-right "></i>  PG Dr. Bhatia Books</a></li>
-					<li><a  href="# "><i class="fa fa-angle-double-right "></i>  UG Courses</a></li>
-					<li><a  href="# "><i class="fa fa-angle-double-right "></i>  Satellite Education</a></li>
-					<li><a  href="# "><i class="fa fa-angle-double-right "></i>  Study Centres</a></li>
-					<li><a  href="# "><i class="fa fa-angle-double-right "></i>  State P.G. Mocks</a></li>
-					<li><a  href="# " target="_blank "><i class="fa fa-angle-double-right "></i> Results</a></li>
-				</ul>
-			</li>
-		</ul>
-		</div><!-- widgets column left end -->
-		<div class="col-lg-3 col-md-3 "><!-- widgets column left -->
-		<ul class="list-unstyled clear-margins "><!-- widgets -->
-		<li class="widget-container widget_nav_menu "><!-- widgets list -->
-		<h3 class="title-widget ">Useful links</h3>
-		<ul>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i> Enquiry Form</a></li>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i> Online Test Series</a></li>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i> Grand Tests Series</a></li>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i> Subject Wise Test Series</a></li>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i> Smart Book</a></li>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i> Test Centres</a></li>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i>  Admission Form</a></li>
-			<li><a href="# "><i class="fa fa-angle-double-right "></i>  Computer Live Test</a></li>
-		</ul>
-	</li>
-</ul>
-</div><!-- widgets column left end -->
-<div class="col-lg-3 col-md-3 "><!-- widgets column center -->
-<ul class="list-unstyled clear-margins "><!-- widgets -->
-<li class="widget-container widget_recent_news "><!-- widgets list -->
-<h3 class="title-widget ">Contact Detail </h3>
-<div class="footerp ">
-	<h4 class="title-median ">Webenlance Pvt. Ltd.</h4>
-	<p><b>Email id:</b> <a href="mailto:info@webenlance.com ">info@webenlance.com</a></p>
-	<p><b>Helpline Numbers </b>
-	<b style="color:#ffc106; ">(8AM to 10PM):</b>  +91-8130890090, +91-8130190010  </p>
-	<p><b>Corp Office / Postal Address</b></p>
-	<p><b>Phone Numbers : </b>7042827160, </p>
-	<p> 011-27568832, 9868387223</p>
-</div>
-<div class="social-icons ">
-	<ul class="nomargin ">
-		<a href="https://www.facebook.com/bootsnipp "><i class="fa fa-facebook-square fa-3x social-fb " id="social "></i></a>
-		<a href="https://twitter.com/bootsnipp "><i class="fa fa-twitter-square fa-3x social-tw " id="social "></i></a>
-		<a href="https://plus.google.com/+Bootsnipp-page "><i class="fa fa-google-plus-square fa-3x social-gp " id="social "></i></a>
-		<a href="mailto:bootsnipp@gmail.com "><i class="fa fa-envelope-square fa-3x social-em " id="social "></i></a>
-	</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</footer>
+					</div><!-- column left end -->
+	
+					<div class="col-lg-3 col-md-3 "><!-- column center left -->
+						<ul class="list-unstyled clear-margins "><!-- content -->
+							<li class="widget-container widget_nav_menu "><!--list -->
+								<h4 class="title-widget ">Departments</h4>
+								<ul>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Coming soon</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Gift certificates</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Classics</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Create a chart</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Represses</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Juno images</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Full label list</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Juno Christmas Store</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> Top Labels</a></li>
+									<li><a  class="footer-link " href="# " target="_blank "><i class="fa fa-angle-double-right "></i> Portable Juno Player</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- column center end -->
+					
+					<div class="col-lg-3 col-md-3 "><!-- column right -->
+						<ul class="list-unstyled clear-margins "><!-- content -->
+							<li class="widget-container widget_nav_menu "><!-- list -->
+								<h4 class="title-widget ">My Juno</h4>
+								<ul>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Artists</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Back-In-Stock Alerts</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Labels</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Account</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Wishlist</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Charts</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My New Release E-mails</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Order History</a></li>
+									<li><a  class="footer-link " href="# "><i class="fa fa-angle-double-right "></i> My Coming Soon Alerts</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!-- column left end -->
+					
+					<div class="col-lg-3 col-md-3 "><!-- column right -->
+						<ul class="list-unstyled clear-margins "><!-- widgets -->
+							<div class="col-3"> 
+								<h5 style="font-style: italic; opacity: .5;">
+									<img class="icon-secure" alt="100% Secure Shopping" src="https://wwwcdn.juno.co.uk/11050000/images/icons/icon-secure-check.svg" style="height: 18px;"> 
+									100% Secure Shopping
+								</h5> 
+								<div style="background-color: white;"> 
+									<img class="logo-visa mr-sm" alt="Visa" src="https://wwwcdn.juno.co.uk/11050000/images/logos/logo-visa.svg" style="height: 15px;"> 
+									<img class="logo-mastercard mr-sm" alt="Mastercard" src="https://wwwcdn.juno.co.uk/11050000/images/logos/logo-mastercard.svg" style="height: 23px;"> 
+									<img class="logo-maestro mr-sm" alt="Maestro" src="https://wwwcdn.juno.co.uk/11050000/images/logos/logo-maestro.svg" style="height: 23px;"> 
+									<img class="logo-paypal mr-sm" alt="Paypal" src="https://wwwcdn.juno.co.uk/11050000/images/logos/logo-paypal.svg" style="height: 17px;"> 
+								</div> 
+								<h5 style="font-style: italic; opacity: .5;">DJ Mag Best Of British</h5> 
+								<h5 style="font-style: italic; opacity: .5;">Best Music Store: 5 time winners</h5> 
+								<h5 style="font-style: italic; opacity: .5;">© 1996 - 2017 Juno Records</h5> 
+								<h5 style="font-style: italic; opacity: .5;">All image and audio content is used by permission of the copyright holders or their agents, 
+									and/or according to fair dealing as per the UK Copyright, Designs and Patents Act 1988.
+								</h5> 
+							</div> 
+						</ul>
+					</div>
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</footer>
+		
 </body>
 </html>
