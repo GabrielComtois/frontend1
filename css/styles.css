@@ -226,13 +226,24 @@ h3 {
 	color: #2c495b;
 }
 
-.dropdown  .dropdown-submenu > a:hover {
+.dropdown  .dropdown-submenu  > a:hover {
+	background-color: #2c495b;
+}
+
+.dropdown  .dropdown-submenu-right  > a:hover {
 	background-color: #2c495b;
 }
 
 .dropdown-submenu > .dropdown-menu {
 	top: 0;
 	left: 100%;
+	margin-top: -6px;
+	margin-left: -1px;
+}
+
+.dropdown-submenu-right > .dropdown-menu {
+	top: 0;
+	right: 100%;
 	margin-top: -6px;
 	margin-left: -1px;
 }
@@ -260,4 +271,13 @@ h3 {
     display: block;
 	top: 27%;
 	left: 37%;
+}
+
+.navbar-center {
+	top: 30%;
+	left: 0%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: auto;
 }
