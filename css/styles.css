@@ -1,16 +1,8 @@
-/*
-.middle-container{
-  border-style: solid;
-  background-color: blue;
-  height: 100vh
-}*/
-
 .album-container {
     height: 200px;
 }
 
 .single-container {
-
     height: 200px;
 }
 
@@ -88,9 +80,7 @@
 }
 
 .title-container-single {
-    border-bottom-style: : solid;
-    border-left-style: solid;
-    border-right-style: solid;
+border-style:solid;
     background-color: #2c495b;
     height: 100%;
     margin-left: 15px;
